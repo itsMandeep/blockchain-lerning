@@ -17,8 +17,8 @@ describe("FavoriteNumbers", function () {
 
   it("Should add new number when addNewNumber function called", async function () {
     const newNumberArray = [12];
-    const numbers = favoriteNumbers.addFavoriteNumber(12);
-
+    await favoriteNumbers.addFavoriteNumber(12);
+    const numbers = favoriteNumbers.getFavoriteNumbers();
     assert(numbers, newNumberArray);
   });
 });
